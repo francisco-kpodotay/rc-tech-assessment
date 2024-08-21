@@ -1,0 +1,8 @@
+.hero-div {
+  cursor: pointer;
+  display: flex;
+}
+
+.available-text {
+  font-size: 13px;
+}

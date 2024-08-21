@@ -1,8 +1,10 @@
+import { HeroObj } from "./interface";
+
 /**
  * Calls API with a specific route and a promise of the required resource.
  * @param route - eg. "heroes"
-*/
-export const callApi = async <T>(route: string): Promise<T> => {
+ */
+export const callApi = async (route: string): Promise<HeroObj[]> => {
   switch (route) {
     case "heroes":
       return fetchHeroes();
@@ -11,7 +13,7 @@ export const callApi = async <T>(route: string): Promise<T> => {
   }
 };
 
-const fetchHeroes = async <T>(): Promise<T> => {
+const fetchHeroes = async (): Promise<HeroObj[]> => {
   const heroes = [
     {
       id: 1,
@@ -70,11 +72,9 @@ const fetchHeroes = async <T>(): Promise<T> => {
     },
   ];
 
-  const promise = new Promise<T>((resolve) => {
-    setTimeout(() => {      
-      resolve(heroes as T);
+  return new Promise<HeroObj[]>((resolve) => {
+    setTimeout(() => {
+      resolve(heroes);
     }, 1000);
   });
-
-  return promise;
 };

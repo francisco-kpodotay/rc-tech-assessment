@@ -18,7 +18,7 @@ Create a React component for listing heroes.
 3. When clicking on a hero, switch it from available to unavailable and vice versa. The change should be reflected in the UI.
 
 
-4. Show a "Loading" message while we are fetching the heroes. If the fetch fails, show an error message like "Failed to fetch heroes.
+4. Show a "Loading" message while we are fetching the heroes. If the fetch fails, show an error message like "Failed to fetch heroes."
 
 
 5. Style the components to look similar to this image:
